@@ -8,6 +8,8 @@ import java.security.MessageDigest
 fun readInput(name: String) = File("src", "$name.txt")
     .readLines()
 
+fun chunked(name: String): List<List<String>> = File("src", "$name.txt").readText().split("\n\n").map { it.split("\n") }
+
 /**
  * Converts string to md5 hash.
  */
