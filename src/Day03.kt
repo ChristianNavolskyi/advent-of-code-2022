@@ -1,5 +1,8 @@
 @OptIn(ExperimentalUnsignedTypes::class)
-class Day03(override val name: String = "Day 03") : Challenge {
+class Day03 : Challenge {
+    override val name: String
+        get() = "Day 03"
+
     override fun inputName(): String = "Day03"
 
     override fun testInputName(): String = "Day03_test"
