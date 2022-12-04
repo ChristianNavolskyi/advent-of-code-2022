@@ -52,7 +52,7 @@ fun main() {
 
     println("Task took: $taskTime to compute part 1 ($first) and part 2 ($second)")
 
-    val times = 3
+    val times = 1
     val firstTime = measureTime { repeat(times) { part1(input) } }.div(times)
     val secondTime = measureTime { repeat(times) { part2(input) } }.div(times)
 

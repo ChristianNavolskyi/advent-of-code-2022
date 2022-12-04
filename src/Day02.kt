@@ -40,7 +40,7 @@ fun main() {
     println(part1(input))
     println(part2(input))
 
-    val times = 3
+    val times = 1
     val firstTime = measureTime { repeat(times) { part1(input) } }.div(times)
     val secondTime = measureTime { repeat(times) { part2(input) } }.div(times)
 
