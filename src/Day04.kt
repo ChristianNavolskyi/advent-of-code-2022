@@ -1,4 +1,4 @@
-class Day04 : Challenge {
+class Day04 : Challenge<Int> {
     override val name: String
         get() = "Day 04"
 
