@@ -45,13 +45,13 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day02_test")
+    val testInput = readLines("Day02_test")
     println(part1(testInput))
 
     check(part1(testInput) == 15)
 //    check(part2(testInput) == 45000)
 
-    val input = readInput("Day02")
+    val input = readLines("Day02")
 
     val firstTime = measureTime {
         part1(input)

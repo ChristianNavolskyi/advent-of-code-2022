@@ -5,8 +5,9 @@ import java.security.MessageDigest
 /**
  * Reads lines from the given input txt file.
  */
-fun readInput(name: String) = File("src", "$name.txt")
-    .readLines()
+fun readLines(name: String) = File("src", "$name.txt").readLines()
+
+fun readContent(name: String) = File("src", "$name.txt").readText()
 
 fun chunked(name: String): List<List<String>> = File("src", "$name.txt").readText().split("\n\n").map { it.split("\n") }
 

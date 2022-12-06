@@ -9,7 +9,7 @@ interface Challenge<Result> {
 
     fun testResult2(): Result
 
-    fun part1(input: List<String>): Result
+    fun part1(input: String): Result
 
-    fun part2(input: List<String>): Result
+    fun part2(input: String): Result
 }

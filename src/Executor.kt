@@ -3,18 +3,20 @@ import kotlin.time.measureTime
 
 @OptIn(ExperimentalTime::class)
 class Executor(private val benchmarkRepeats: Int = 3) {
-    private val challenges: MutableList<Challenge> = mutableListOf()
+    private val challenges: MutableList<Challenge<*>> = mutableListOf()
 
     init {
-        challenges.add(Day03())
-        challenges.add(Day04())
+//        challenges.add(Day03())
+//        challenges.add(Day04())
+        challenges.add(Day05())
+        challenges.add(Day06())
     }
 
     fun executeChallenges() {
         challenges.forEach {
             println("Challenge: ${it.name}")
-            val testInput = readInput(it.testInputName())
-            val input = readInput(it.inputName())
+            val testInput = readContent(it.testInputName())
+            val input = readContent(it.inputName())
 
             val testResult1 = it.part1(testInput)
             println("First test result: $testResult1")
@@ -32,7 +34,7 @@ class Executor(private val benchmarkRepeats: Int = 3) {
 
     fun benchmarkChallenges() {
         challenges.forEach { challenge ->
-            val input = readInput(challenge.inputName())
+            val input = readContent(challenge.inputName())
 
             println("Benchmark Challenge: ${challenge.name}")
 

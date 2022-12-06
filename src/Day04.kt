@@ -10,9 +10,9 @@ class Day04 : Challenge<Int> {
 
     override fun testResult2(): Int = 4
 
-    override fun part1(input: List<String>): Int = input.map { ElfPair(it) }.count { it.contained }
+    override fun part1(input: String): Int = input.split("\n").map { ElfPair(it) }.count { it.contained }
 
-    override fun part2(input: List<String>): Int = input.map { ElfPair(it) }.count { it.overlaps }
+    override fun part2(input: String): Int = input.split("\n").map { ElfPair(it) }.count { it.overlaps }
 }
 
 class ElfPair(private val input: String) {

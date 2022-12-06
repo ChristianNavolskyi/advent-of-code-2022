@@ -11,8 +11,8 @@ class Day03 : Challenge<Int> {
 
     override fun testResult2(): Int = 70
 
-    override fun part1(input: List<String>): Int {
-        return input.map {
+    override fun part1(input: String): Int {
+        return input.split("\n").map {
             Pair(it.substring(0, it.length / 2), it.substring(it.length / 2, it.length))
         }.sumOf {
             val first = it.first.encode()
@@ -24,8 +24,8 @@ class Day03 : Challenge<Int> {
         }
     }
 
-    override fun part2(input: List<String>): Int {
-        return input.mapIndexed { index, s ->
+    override fun part2(input: String): Int {
+        return input.split("\n").mapIndexed { index, s ->
             Pair(index / 3, s)
         }.groupBy { it.first }
             .map { mapEntry ->
