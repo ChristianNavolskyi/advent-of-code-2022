@@ -11,6 +11,7 @@ class Executor(private val benchmarkRepeats: Int = 3) {
         challenges.add(Day05())
         challenges.add(Day06())
         challenges.add(Day07())
+        challenges.add(Day08())
     }
 
     fun executeChallenges() {
@@ -28,8 +29,6 @@ class Executor(private val benchmarkRepeats: Int = 3) {
             println("Second test result: $testResult2")
             check(testResult2 == it.testResult2())
             println("Part 2 - ${it.part2(input)}")
-
-
         }
     }
 
@@ -51,6 +50,11 @@ class Executor(private val benchmarkRepeats: Int = 3) {
 fun main() {
     val executor = Executor(benchmarkRepeats = 1)
 
+    println("Challenges")
     executor.executeChallenges()
+
+    println()
+    println()
+    println("Benchmarking")
     executor.benchmarkChallenges()
 }
