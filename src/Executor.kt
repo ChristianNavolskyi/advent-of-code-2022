@@ -10,6 +10,7 @@ class Executor(private val benchmarkRepeats: Int = 3) {
 //        challenges.add(Day04())
         challenges.add(Day05())
         challenges.add(Day06())
+        challenges.add(Day07())
     }
 
     fun executeChallenges() {
