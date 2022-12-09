@@ -1,9 +1,11 @@
 interface Challenge<Result> {
     val name: String
 
-    fun inputName(): String
+    fun inputName(): String = name.replace(" ", "")
 
-    fun testInputName(): String
+    fun testInputName(): String = inputName() + "_test"
+
+    fun testInputName2(): String = inputName() + "_test"
 
     fun testResult1(): Result
 

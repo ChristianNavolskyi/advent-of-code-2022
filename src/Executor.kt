@@ -12,20 +12,22 @@ class Executor(private val benchmarkRepeats: Int = 3) {
         challenges.add(Day06())
         challenges.add(Day07())
         challenges.add(Day08())
+        challenges.add(Day09())
     }
 
     fun executeChallenges() {
         challenges.forEach {
             println("Challenge: ${it.name}")
-            val testInput = readContent(it.testInputName())
+            val testInput1 = readContent(it.testInputName())
+            val testInput2 = readContent(it.testInputName2())
             val input = readContent(it.inputName())
 
-            val testResult1 = it.part1(testInput)
+            val testResult1 = it.part1(testInput1)
             println("First test result: $testResult1")
             check(testResult1 == it.testResult1())
             println("Part 1 - ${it.part1(input)}")
 
-            val testResult2 = it.part2(testInput)
+            val testResult2 = it.part2(testInput2)
             println("Second test result: $testResult2")
             check(testResult2 == it.testResult2())
             println("Part 2 - ${it.part2(input)}")
